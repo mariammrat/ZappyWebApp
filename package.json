@@ -1,0 +1,32 @@
+{
+  "name": "zappy-web-app",
+  "main": "server.js",
+  "description": "Zappy Web App",
+  "version": "0.1.1",
+  "private": false,
+  "engines": {
+    "node": "6.*"
+  },
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM-Bluemix/get-started-node"
+  },
+  "dependencies": {
+    "@slack/client": "^3.14.2",
+    "body-parser": "^1.17.x",
+    "cfenv": "^1.0.x",
+    "mongodb": "x.x.x",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.x",
+    "twitter": "x.x.x"
+  },
+  "author": "Mariam El Tantawi",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-http": "^1.0.0"
+  }
+}

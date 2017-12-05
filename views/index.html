@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zappy</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <style>
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:50px; }
+        #todo-list              { margin-bottom:30px; }
+    </style>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script>
+		var tweetsModule = angular.module('tweetsModule', []);
+		tweetsModule.controller('mainController', function($scope, $http) {
+		$http.get('/api/tweetsSet').then(function(response) {
+			$scope.tweets = response.data;
+		});
+});
+	</script>
+
+</head>
+<body  ng-app="tweetsModule">
+    <div class="container" ng-controller="mainController">
+
+        <div class="jumbotron text-center">
+            <h1>There are <span class="label label-info">{{ tweets.length }}</span> tweets by FictionFone</h1>
+        </div>
+
+        <div id="todo-list" class="row">
+			<table class="table table-condensed" ng-repeat="tweet in tweets">
+			<tr><th>{{ tweet.text }}</th></tr>
+			</table>
+            <!--<div class="col-sm-4 col-sm-offset-4" ng-repeat="tweet in tweets">
+                    <h1> {{ tweet.text }}</h1>
+            </div>-->
+        </div>
+    </div>
+</body>
+</html>
