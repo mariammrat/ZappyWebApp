@@ -1,4 +1,5 @@
 node_modules
 /
 *.bat
+private-README.md
 .env

@@ -8,7 +8,7 @@ exports.getTweets = function getTweets(callback) {
 		access_token_key: process.env.TWITTER_ACCESS_TOKEN,
 		access_token_secret: process.env.TWITTER_ACCESS_SECRET
 	});
-	twitter.get('statuses/user_timeline',{ screen_name: 'FictionFone'}, function(error, tweets, response) {
+	twitter.get('statuses/user_timeline',{ screen_name: process.env.TWITTER_SCREEN_NAME}, function(error, tweets, response) {
 		callback(error, tweets);
 	});
 }
