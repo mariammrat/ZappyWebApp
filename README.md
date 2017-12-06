@@ -24,3 +24,5 @@ As soon as any member of the marketing team, places a messages on a channel cont
 
 # Built and Deployed Zappy Instance on IBM Cloud
 **URL**: [Zappy Web App on IBM Cloud](https://zappywebapp.eu-gb.mybluemix.net/)
+**Twiiter**: [Fiction Fone](https://twitter.com/FictionFone)
+**Slack**: [FictionFone Channel](https://fictionfone.slack.com/messages) 
